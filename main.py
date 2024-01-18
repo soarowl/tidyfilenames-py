@@ -3,6 +3,11 @@ import os
 import pandas as pd
 
 
+def main():
+    # 请修改下面参数
+    tidynames("data.xlsx", "源码")
+
+
 def nametidy(data, root, filename):
     """
     目录或文件名标准化处理
@@ -35,10 +40,6 @@ def tidynames(datafilename, top):
             nametidy(data, root, name)
         for name in dirs:
             nametidy(data, root, name)
-
-
-def main():
-    tidynames("data.xlsx", "源码")
 
 
 if __name__ == "__main__":
